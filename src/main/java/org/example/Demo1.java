@@ -4,6 +4,13 @@ interface Greeting {
     void greet();
 }
 
+abstract class Greeting2 {
+    abstract void displayName(String name);
+    private void hh(){
+        System.out.println("Hello World");
+    }
+}
+
 public class Demo1 {
     static void main() {
 //        ? anomoyous inner class
@@ -15,6 +22,15 @@ public class Demo1 {
             }
         };
         g.greet();
+
+        Greeting2 g2 = new Greeting2() {
+            @Override
+            public void displayName(String name) {
+                System.out.println("Hello " + name);
+            }
+
+        };
+        g2.displayName("Hammad");
     }
 }
 /* Step 1 (hidden): Java generates a class behind the scenes, something like:
