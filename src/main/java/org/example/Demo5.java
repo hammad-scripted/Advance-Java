@@ -24,7 +24,7 @@ public class Demo5 {
 
         };
 
-//        ! lambda expression
+//        ! lambda expression work only with functional interfaces
         W w1 = () -> {
             System.out.println("this is a lambda expression");
         };
@@ -38,8 +38,12 @@ public class Demo5 {
                 return a + b;
             }
         };
-        System.out.println(ex.add(1230,343));
+        System.out.println(ex.add(1230, 343));
 
+        Addition ex1 = (i, j) -> {
+            return i + j;
+        };
+        System.out.println(ex1.add(1030, 343));
 
     }
 }
